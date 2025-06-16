@@ -16,7 +16,7 @@ Conçu pour automatiser la reconnaissance, la recherche de vulnérabilités et l
 ## 🚀 Installation
 
 ```bash
-git clone https://github.com/<yourname>/redspectre.git
+git clone https://github.com/VKG84/redspectre.git
 cd redspectre
 sudo ./setup.sh
 python3 /opt/redspectre/main.py

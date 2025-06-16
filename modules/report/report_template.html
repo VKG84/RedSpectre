@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Rapport de Pentest - {{ target }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h1, h2 { color: #2c3e50; }
+        pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ccc; white-space: pre-wrap; }
+        .section { margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <h1>Rapport de Pentest</h1>
+    <div class="section">
+        <strong>Cible :</strong> {{ target }}<br>
+        <strong>Date :</strong> {{ date }}<br>
+        <strong>Score de sécurité :</strong> {{ score }}/100
+    </div>
+
+    <div class="section">
+        <h2>Recommandations</h2>
+        <ul>
+        {% for rec in recommendations %}
+            <li>{{ rec }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Reconnaissance Passive</h2>
+        <pre>{{ recon }}</pre>
+    </div>
+
+    <div class="section">
+        <h2>Scan Réseau</h2>
+        <pre>{{ scan }}</pre>
+    </div>
+
+    <div class="section">
+        <h2>Scan de Vulnérabilités (Nuclei)</h2>
+        <pre>{{ nuclei }}</pre>
+    </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+PyQt5
+networkx
+matplotlib
+jinja2
+python-whois
+pymsfrpc
+requests
